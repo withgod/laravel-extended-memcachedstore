@@ -16,7 +16,7 @@ class EMemcachedStore extends MemcachedStore {
         Memcached::RES_STORED,
         Memcached::RES_NOTSTORED,
         Memcached::RES_NOTFOUND,
-        Memcached::RES_BAD_KEY_PROVIDED,
+        //Memcached::RES_BAD_KEY_PROVIDED,
     ];
 
     public function many($array) {
