@@ -1,7 +1,8 @@
 {
     "name": "withgod/laravel-extended-memcachedstore",
     "description": "extended memcached store.",
-    "type": "library, laravel-plugin, laravel",
+    "type": "library",
+    "keywords": ["library", "laravel", "laravel-plugin"],
     "require": {
         "php": "^7.2",
         "laravel/framework": "^6.9"
