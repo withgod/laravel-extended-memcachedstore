@@ -62,14 +62,23 @@ same as memcached.
 
 ```
 root@70c0910de41e:/var/tmp/app# tail -f ./storage/logs/laravel.log
-[2020-02-20 13:56:05] local.DEBUG: http://localhost:8080/memcached	0.000134	get	laravel_cache:memc-bench-5e4e8ff5bf7ba
-[2020-02-20 13:56:05] local.DEBUG: http://localhost:8080/memcached	0.000169	put	laravel_cache:memc-bench-5e4e8ff5bfb36
-[2020-02-20 13:56:05] local.DEBUG: http://localhost:8080/memcached	0.000164	get	laravel_cache:memc-bench-5e4e8ff5bd26c
-[2020-02-20 13:56:05] local.DEBUG: http://localhost:8080/memcached	0.000128	get	laravel_cache:memc-bench-5e4e8ff5bd8a5
-[2020-02-20 13:56:05] local.DEBUG: http://localhost:8080/memcached	0.000115	get	laravel_cache:memc-bench-5e4e8ff5c060b
-[2020-02-20 13:56:05] local.DEBUG: http://localhost:8080/memcached	0.000119	get	laravel_cache:memc-bench-5e4e8ff5be28f
-[2020-02-20 13:56:05] local.DEBUG: http://localhost:8080/memcached	0.000124	get	laravel_cache:memc-bench-5e4e8ff5be28f
-[2020-02-20 13:56:05] local.DEBUG: http://localhost:8080/memcached	0.000219	put	laravel_cache:memc-bench-5e4e8ff5c1017
-[2020-02-20 13:56:05] local.DEBUG: http://localhost:8080/memcached	0.000187	put	laravel_cache:memc-bench-5e4e8ff5c13fc
-[2020-02-20 13:56:05] local.DEBUG: http://localhost:8080/memcached	0.000198	put	laravel_cache:memc-bench-5e4e8ff5c17a4
-```
+[2020-02-20 19:43:53] local.DEBUG: http://localhost:8080/memcached      0.000387        put     laravel_cache:memc-bench-0000000000000
+[2020-02-20 19:43:53] local.DEBUG: http://localhost:8080/memcached      0.000394        put     laravel_cache:memc-bench-5e4ee17950208
+[2020-02-20 19:43:53] local.DEBUG: http://localhost:8080/memcached      0.000217        put     laravel_cache:memc-bench-5e4ee17950722
+[2020-02-20 19:43:53] local.DEBUG: http://localhost:8080/memcached      0.000258        put     laravel_cache:memc-bench-5e4ee17954f6b
+[2020-02-20 19:43:53] local.DEBUG: http://localhost:8080/memcached      0.000165        get     laravel_cache:memc-bench-5e4ee17950208
+[2020-02-20 19:43:53] local.DEBUG: http://localhost:8080/memcached      0.000254        put     laravel_cache:memc-bench-5e4ee1795578a
+[2020-02-20 19:43:53] local.DEBUG: http://localhost:8080/memcached      0.000252        add     laravel_cache:memc-bench-add-5e4ee17955ba5
+[2020-02-20 19:43:53] local.DEBUG: http://localhost:8080/memcached      0.000656        add     laravel_cache:memc-bench-add-5e4ee17955ba5
+[2020-02-20 19:43:53] local.DEBUG: http://localhost:8080/memcached      0.002009        putMany laravel_cache:memc-bench-putmany-5e4ee17955ba5-0,laravel_cache:memc-bench-putmany-5e4ee17955ba5-1,laravel_cache:memc-bench-putmany-5e4ee17955ba5-2,laravel_cache:memc-bench-putmany-5e4ee17955ba5-3,laravel_cache:memc-bench-putmany-5e4ee17955ba5-4,laravel_cache:memc-bench-putmany-5e4ee17955ba5-5,laravel_cache:memc-bench-putmany-5e4ee17955ba5-6,laravel_cache:memc-bench-putmany-5e4ee17955ba5-7,laravel_cache:memc-bench-putmany-5e4ee17955ba5-8,laravel_cache:memc-bench-putmany-5e4ee17955ba5-9
+[2020-02-20 19:43:53] local.DEBUG: http://localhost:8080/memcached      0.000300        many    laravel_cache:memc-bench-putmany-5e4ee17955ba5-0,laravel_cache:memc-bench-putmany-5e4ee17955ba5-1,laravel_cache:memc-bench-putmany-5e4ee17955ba5-2,laravel_cache:memc-bench-putmany-5e4ee17955ba5-3,laravel_cache:memc-bench-putmany-5e4ee17955ba5-4,laravel_cache:memc-bench-putmany-5e4ee17955ba5-5,laravel_cache:memc-bench-putmany-5e4ee17955ba5-6,laravel_cache:memc-bench-putmany-5e4ee17955ba5-7,laravel_cache:memc-bench-putmany-5e4ee17955ba5-8,laravel_cache:memc-bench-putmany-5e4ee17955ba5-9
+[2020-02-20 19:43:53] local.DEBUG: http://localhost:8080/memcached      0.000334        put     laravel_cache:memc-bench-increment-5e4ee17955ba5
+[2020-02-20 19:43:53] local.DEBUG: http://localhost:8080/memcached      0.000185        increment       laravel_cache:memc-bench-increment-5e4ee17955ba5
+[2020-02-20 19:43:53] local.DEBUG: http://localhost:8080/memcached      0.000260        increment       laravel_cache:memc-bench-increment-5e4ee17955ba5
+[2020-02-20 19:43:53] local.DEBUG: http://localhost:8080/memcached      0.000242        increment       laravel_cache:memc-bench-increment-5e4ee17955ba5
+[2020-02-20 19:43:53] local.DEBUG: http://localhost:8080/memcached      0.000222        get     laravel_cache:memc-bench-increment-5e4ee17955ba5
+[2020-02-20 19:43:53] local.DEBUG: http://localhost:8080/memcached      0.000284        put     laravel_cache:memc-bench-decrement-5e4ee17955ba5
+[2020-02-20 19:43:53] local.DEBUG: http://localhost:8080/memcached      0.000262        decrement       laravel_cache:memc-bench-decrement-5e4ee17955ba5
+[2020-02-20 19:43:53] local.DEBUG: http://localhost:8080/memcached      0.000191        decrement       laravel_cache:memc-bench-decrement-5e4ee17955ba5
+[2020-02-20 19:43:53] local.DEBUG: http://localhost:8080/memcached      0.000172        decrement       laravel_cache:memc-bench-decrement-5e4ee17955ba5
+[2020-02-20 19:43:53] local.DEBUG: http://localhost:8080/memcached      0.000262        get     laravel_cache:memc-bench-decrement-5e4ee17955ba5```
