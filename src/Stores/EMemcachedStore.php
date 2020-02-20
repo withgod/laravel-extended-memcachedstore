@@ -56,8 +56,21 @@ class EMemcachedStore extends MemcachedStore {
 
         $this->operation    = $method;
 
-        $this->key          = is_array($params[0]) ?
-            array_map(function ($v) { return $this->prefix.$v;}, $params[0]) : $this->prefix.$params[0];
+        if (is_array($params[0])) {
+            $keys = [];
+            if ($method == 'putMany') {
+                foreach ($params[0] as $k => $v) {
+                    $keys[] = $this->prefix . $k;
+                }
+            } else { #many
+                foreach ($params[0] as $v) {
+                    $keys[] = $this->prefix . $v;
+                }
+            }
+            $this->key = $keys;
+        } else {
+            $this->key = $this->prefix.$params[0];
+        }
         $this->elapsed_time = microtime(TRUE) - $start_time;
         $this->log();
 
