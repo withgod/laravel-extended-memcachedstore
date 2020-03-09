@@ -79,7 +79,7 @@ class EMemcachedStore extends MemcachedStore {
 
     protected function log() {
         $attr =[
-            php_sapi_name() == 'cli' ? cli : url()->current(),
+            php_sapi_name() == 'cli' ? 'cli' : url()->current(),
             number_format($this->elapsed_time, 6),
             $this->operation,
             is_array($this->key) ? implode(',', $this->key) : $this->key
