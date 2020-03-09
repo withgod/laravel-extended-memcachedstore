@@ -47,6 +47,7 @@ same as memcached.
                 Memcached::OPT_LIBKETAMA_COMPATIBLE => true,
                 //Memcached::OPT_SERIALIZER => Memcached::SERIALIZER_IGBINARY,
                 //Memcached::OPT_BINARY_PROTOCOL => true,
+                //Memcached::OPT_TCP_NODELAY => true, # https://github.com/php-memcached-dev/php-memcached/issues/400
             ],
             'servers' => [
                 [
